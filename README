@@ -1,0 +1,84 @@
+Sortarea unui vector folosind algoritmi de
+sortare hybrizi
+
+Observatie. Aceasta lucrare isi propune analizarea algo-
+ritmilor hybrizi de sortare prin evidentierea functionalitatii in
+timp/spatiu.
+Cuvinte cheie: Quicksort, InsertionSort, HeapSort, complex-
+itate, cazuri limita.
+
+
+Introducere
+
+Descrierea problemei rezolvate
+De o lunga perioada de timp lumea IT se confrunta cu ordonarea
+unui input de date.Pentru a rezolva aceasta problema s-au inven-
+tat o multitudine de algoritmi pentru sortare. Caracterista de
+ii face diferiti/mai buni/mai inceti este, insa, complexitatea lor
+atat in timp cat si in spatiu. Astfel, cateva exemple de algoritmi
+sunt :
+• BubbleSort, cu complexitatea generala O(n^2)
+• InsertionSort, cu complexitatea ceva mai diferita.
+– Cel mai defavorabil caz : O(n^2) comparari si O(n^2)
+interschimbari
+– Cel mai favorabil caz, O(n) comparari si O(1) inter-
+schimbari
+• Quicksort, cu complextatea
+– Cel mai defavorabil caz O(n^2)
+– Cel mai favorabil caz O(n)
+Si acestea sunt doar cateva exemple. Acest algoritmi sunt folositi
+pentru a sorta anumite structuri de date precum vectori / liste.
+Mai departe vom studia avantajele si dezavantajele unor al-
+goritmi hybrizi, a caror insemnatate o vom afla in sectiunea
+urmatoare.
+
+
+
+Exemple de aplicatii practice pentru problema aleasa
+Sa presupunem ca avem o baza de date foarte mare si variata
+si urmarim soartarea ei dupa un anumit criteriu. Bineinteles ca
+nu vom putea lua fiecare data si sa o punem pe pozitia necesara
+pentru ca baza de date sa fie sortata, si vom avea nevoie de un
+algoritm care va compara fiecare data si o va clasa in pozitia
+specifica, la final baza de date fiind sortata.
+
+Specificarea solutiilor alese
+Avem la indemana o multitudine de algoritmi de sortare care
+au, fiecare, pe rand, avantaje si dezavantaje. Exista cazuri in
+care unul dintre algoritmi este mai bun decat altul si vice-versa.
+Acest lucru este din cauza tipului variat de date pe care nu
+il putem controla. O solutie pentru aceasta problema a fost
+inventarea algoritmilor hybrizi care, impart inputul mare in
+inputuri mai mici si aplica algoritmii cei mai eficienti pentru
+acel caz. Despre acesti algoritmi hybrizi vom discuta in aceasta
+lucrare.
+
+Specificarea criteriilor de evaluare alese pentru val-
+idarea solutiilor
+Algoritmii pe care ii vom discuta sunt:
+• IntroSort(Combinatie intre QuickSort / HeapSort/ Inser-
+tionSort)
+• TimSort(Combinatie intre InsertionSort / MergeSort)
+• CombSort(O imbunatatire a algoritmului : BubbleSort)
+Pentru a putea compara acesti algoritmi avem nevoie de in-
+puturi variate si de dimensiuni foarte mari. Fiecare algoritm
+are cazuri limita ce ii dezavantajeaza(vom discuta despre el mai
+
+
+tarziu). Bineinteles ca inputurile nu se pot face manual si, pen-
+tru aceasta problema, am creat un generator de inputuri aleator.
+Exista inputuri diferite iar, pentru ca algoritmii sunt o com-
+binatie de alti algoritmi, nu vor putea rula pe fiecare tip de
+input, asa ca, intai vom testa functionalitatea algoritmilor pen-
+tru tipul de input, verificand criteriile de functionalitate pentru
+fiecare algoritm.
+Cu alte cuvinte, testele se impart in doua categorii:
+• De acceptanta
+• De eficienta
+In cazul testelor de acceptanta vom spune daca un algoritm
+poate rula pe inputul specific testului si, care, indeplineste con-
+ditiile pentru fiecare algoritm din combinatia algoritmului hy-
+brid, iar, dupa ce am decis ce algoritm functioneaza, in cazul
+testelor de performanta vom vedea care dintre algoritmii alesi
+functioneaza mai rapid pe inputurile specifice.
+
